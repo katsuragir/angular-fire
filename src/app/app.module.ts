@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
-import { PerformanceModule } from '@angular/fire/performance';
-import { PerformanceMonitoringService } from '@angular/fire/compat/performance';
+import {
+  PerformanceMonitoringService,
+  AngularFirePerformanceModule,
+} from '@angular/fire/compat/performance';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +24,7 @@ import { PerformanceMonitoringService } from '@angular/fire/compat/performance';
       appId: '1:509463034815:web:42b220e4f7c101654f7f0a',
       measurementId: 'G-N4H2TN4DH7',
     }),
-    PerformanceModule,
+    AngularFirePerformanceModule,
   ],
   providers: [PerformanceMonitoringService],
   bootstrap: [AppComponent],
